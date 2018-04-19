@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+.left-panel {
+  position: relative;
+  height: 100vh;
+  background-color: #45dbc9;
+}
+
+.right-panel {
+  position: relative;
+  height: 100vh;
+  background-color: #0b776a;
+}
+
+.welcome-message-container {
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -250px;
+  width: 500px;
+  height: 250px;
+}
+
+.login-form-container {
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 250px;
+}
