@@ -19,6 +19,17 @@ module.exports = {
         test: /\.css$/,
         exclude: /\/node_modules\//,
         loader: ['style-loader', 'css-loader'],
+    }, {
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        exclude: /node_modules/,
+        loader: 'url-loader?limit=1024&name=/public/dist/fonts/[name].[ext]'
+    }, {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+            name: '/src/fonts/[name].[ext]',
+            outputPath: '/public/dist'
+        }
     }]
   }
 };

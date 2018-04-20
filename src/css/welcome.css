@@ -6,13 +6,13 @@ body {
 .left-panel {
   position: relative;
   height: 100vh;
-  background-color: #45dbc9;
+  background-color: #031727;
 }
 
 .right-panel {
   position: relative;
   height: 100vh;
-  background-color: #0b776a;
+  background-color: #18c29c;
 }
 
 .welcome-message-container {
@@ -25,6 +25,14 @@ body {
   height: 250px;
 }
 
+.login-form-title {
+  margin-bottom: 35px;
+  font-family: Salome, Noway, sans-serif;
+  font-size: 24px;
+  color: rgba(136, 249, 212, 255);
+  text-align: left;
+}
+
 .login-form-container {
   position: absolute;
   top: 50%;
@@ -33,4 +41,19 @@ body {
   margin-left: -150px;
   width: 300px;
   height: 250px;
+}
+
+.login-form-row {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(136, 249, 212, 255);
+  margin-bottom: 30px;
+}
+
+.login-form-input {
+  font-size: 14px;
+  height: 18px;
+  border: none;
+  outline: none;
+  color: rgba(136, 249, 212, 255);
+  background-color: #18c29c;
 }

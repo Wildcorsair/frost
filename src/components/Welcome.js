@@ -20,17 +20,16 @@ function Welcome() {
         </div>
         <div className="col-md-5 right-panel">
           <div className="login-form-container">
+            <div className="login-form-title">Login to your account</div>
             <form>
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input id="username" className="form-control" type="text" name="username" value="" />
+              <div className="login-form-row">
+                <input id="username" className="login-form-input" type="text" name="username" placeholder="Your email" value="" />
               </div>
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input id="password" className="form-control" type="password" name="password" value="" />
+              <div className="login-form-row">
+                <input id="password" className="login-form-input" type="password" name="password" placeholder="Password" value="" />
               </div>
-              <div className="form-group">
-                <input id="login" className="btn btn-default" type="submit" value="Login" />
+              <div className="">
+                <input id="login" className="" type="submit" value="Login" />
               </div>
             </form>
           </div>
