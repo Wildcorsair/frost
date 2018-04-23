@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'nowayregular';
+    src: url('/dist/fonts/noway-regular-webfont.eot');
+    src: url('/dist/fonts/noway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/dist/fonts/noway-regular-webfont.woff2') format('woff2'),
+         url('/dist/fonts/noway-regular-webfont.woff') format('woff'),
+         url('/dist/fonts/noway-regular-webfont.ttf') format('truetype'),
+         url('/dist/fonts/noway-regular-webfont.svg#nowayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -25,9 +37,15 @@ body {
   height: 250px;
 }
 
+.welcome-message {
+  margin: 30px 0 50px 0;
+  color: rgba(18, 104, 114, 255);
+  font-size: 12px;
+}
+
 .login-form-title {
   margin-bottom: 35px;
-  font-family: Salome, Noway, sans-serif;
+  font-family: nowayregular, Tahoma, sans-serif;
   font-size: 24px;
   color: rgba(136, 249, 212, 255);
   text-align: left;
@@ -50,10 +68,75 @@ body {
 }
 
 .login-form-input {
-  font-size: 14px;
+  width: 300px;
   height: 18px;
+  font-size: 14px;
   border: none;
   outline: none;
   color: rgba(136, 249, 212, 255);
   background-color: #18c29c;
+}
+
+input {outline: none;}
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #18c29c !important; /* Цвет фона */
+    -webkit-text-fill-color: rgba(136, 249, 212, 255) !important; /* цвет текста */
+    color: rgba(136, 249, 212, 255) !important; /* цвет текста */
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: nowayregular, Tahoma, sans-serif;
+  color: rgba(136, 249, 212, 255);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  font-family: nowayregular, Tahoma, sans-serif;
+  color: rgba(136, 249, 212, 255);
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  font-family: nowayregular, Tahoma, sans-serif;
+  color: rgba(136, 249, 212, 255);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-family: nowayregular, Tahoma, sans-serif;
+  color: rgba(136, 249, 212, 255);
+}
+
+.ed-btn {
+  font-family: nowayregular, Tahoma, sans-serif;
+  padding: 7px 40px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+}
+
+.btn-register {
+  border: 1px solid #88f9d4;
+  color: #fff;
+  background-color: #18c29c;
+}
+a.btn-register:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-login {
+  border: 1px solid #16a78f;
+  color: #16a78f;
+  background-color: #fff;
+}
+
+.forgot-password-link {
+  font-family: nowayregular, Tahoma, sans-serif;
+  margin-left: 15px;
+  color: rgba(136, 249, 212, 255);
+}
+
+.forgot-password-link:hover {
+  color: rgba(136, 249, 212, 125);
+  text-decoration: none;
 }
