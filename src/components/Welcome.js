@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import LoginService from '../services/LoginService';
+import createBrowserHistory from 'history/createBrowserHistory';
 import '../css/welcome.css';
 
 class Welcome extends Component {
@@ -26,8 +27,11 @@ class Welcome extends Component {
   handleLogin(event) {
     event.preventDefault();
     const loginService = new LoginService();
-    loginService.authentication(this.state.username, this.state.password);
-    // alert('Username and password: ' + this.state.username + '/' + this.state.password);
+    let isAuthenticated = loginService.authentication(this.state.username, this.state.password);
+
+    if (isAuthenticated) {
+      this.props.history.push('/dashboard');
+    }
   }
 
   render() {
