@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import LoginService from '../services/LoginService';
 import createBrowserHistory from 'history/createBrowserHistory';
 import '../css/welcome.css';
