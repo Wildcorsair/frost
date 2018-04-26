@@ -1,11 +1,22 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
+    encoders:
+        # default encryptor is we use user in_memory
+        # Symfony\Component\Security\Core\User\User: plaintext
+        ApiBundle\Entity\User:
+            algorithm: bcrypt
+            cost: 12
+
+    access_control:
+        - { path: ^/dashboard, roles: IS_AUTHENTICATED_FULLY }
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        in_memory:
-            memory: ~
+        our_db_provider:
+            entity:
+                class: ApiBundle:User
+                property: username
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -14,7 +25,9 @@ security:
             security: false
 
         main:
-            anonymous: ~
+            pattern: ^/
+            http_basic: ~
+            provider: our_db_provider
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
