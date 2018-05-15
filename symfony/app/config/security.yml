@@ -1,5 +1,7 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
+# Encode password by command line:
+# php -r "echo password_hash('ThePassword', PASSWORD_BCRYPT, ['cost' => 12]) . PHP_EOL;"
 security:
     encoders:
         # default encryptor is we use user in_memory
